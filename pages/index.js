@@ -28,50 +28,63 @@ export default function Home() {
   ]
 
   return (
-    <div className="py-12 bg-gray-100 overflow-y-hidden">
-      <dh-component>
-        <nav className="w-full">
-          <div className="container mx-auto px-4 flex items-center justify-between">
-            <div className="flex items-center" aria-label="Home" role="img">
-              <Link href='/' passHref>
-                <a><Image className="cursor-pointer w-8 sm:w-auto" src="/ahcity.png" width={60} height={60} alt="logo" title="AH City" /></a>
-                {/* <p className="ml-2 lg:ml-4 text-base lg:text-2xl font-bold text-gray-800">AH City</p> */}
-              </Link>
-              
+    <div className="dark:bg-[#97b4ce]">
+      <div className="container mx-auto py-9 md:py-12 lg:py-24">
+        <div className="flex flex-col lg:flex-row justify-center items-strech mx-4">
+            <div className="lg:w-4/12 flex justify-center items-center">
+                <div>
+                    <h1 className="dark:text-[#b9805a] text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 w-7/12">AH CITY</h1>
+                    <h2 className="dark:text[#b9805a] text-3xl font-semibold text-[#b9805a] uppercase">supreme living</h2>
+                    <p className="dark:text-white md:w-7/12 lg:w-11/12 xl:w-10/12 mt-4 lg:mt-5 text-base leading-normal text-lg">AH City, is the epitome of revolution, the junction of four provinces, Punjab, Islamabad, Balochistan, and Sindh, making the project strategically located in D.I.Khan. Offering a new standard of living by bringing masterpiece facilities like healthcare, education, and hospitals, with the aim to become the benchmark for supreme living in D.I.Khan.</p>
+                    <br />
+                    <div className="flex justify-start items-start mb-10 sm:mb-20 gap-x-1">
+                      {social.map((item) => (
+                        <Link href={item.link} passHref>
+                          <a target="_blank"><Button value={item.icon} bgColor={item.bgColor} /></a>
+                        </Link>
+                      ))}
+                    </div>
+                </div>
             </div>
-            <div>
-              <div id="menu">
-                <ul className="flex text-3xl md:text-base items-center py-8 md:flex flex-col md:flex-row justify-center fixed md:relative top-0 bottom-0 left-0 right-0 bg-white md:bg-transparent  z-20">
-                  <li key="uniqueId" className="text-gray-600 text-3xl font-extrabold hover:text-gray-800 cursor-pointer md:ml-10 pt-10 md:pt-0">
-                    <Link href='/' passHref><a title="Supreme living">AH CITY</a></Link>
-                  </li>
-                </ul>
-              </div>
+            <div className="lg:w-8/12 mt-6 md:mt-8 lg:mt-0">
+                <div className="relative w-full h-full">
+                    <Image src="/hero.jpg" alt="A lounge sofa" className="w-full h-full relative hidden lg:block object-cover" width={832} height={947} />
+                    {/* <Image src="/hero-1.png" alt="A lounge sofa" className="w-full h-full lg:hidden" width={843} height={960} /> */}
+                    <div className="hidden lg:block absolute bottom-0 right-0 bg-red-200 w-1/2">
+                        <button className="dark:hover:bg-gray-800 dark:bg-white dark:hover:text-gray-50 dark:text-gray-800 bg-gray-800 text-xl xl:text-2xl font-medium text-white flex justify-between w-full items-center p-5 xl:p-6 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700">
+                            Coming Soon!
+                            <div>
+                                <svg className="fill-stroke dark:hover:text-gray-600" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.66663 16H25.3333" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M20 21.3333L25.3333 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M20 10.667L25.3333 16.0003" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div className="mt-6 md:mt-8 lg:hidden">
+                    <button className="dark:hover:bg-gray-800 dark:bg-white dark:hover:text-gray-50 dark:text-gray-800 bg-gray-800 text-base md:text-xl font-semibold leading-tight text-white flex justify-between items-center px-5 py-4 lg:py-7 lg:px-7 w-full md:w-5/12 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700">
+                        Discover More
+                        <div>
+                            <svg className="fill-stroke" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clipPath="url(#clip0)">
+                                    <path d="M0.453735 12H14.4537" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M10.4539 16L14.4539 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M10.4539 8L14.4539 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <rect width="21.7269" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
             </div>
-          </div>
-        </nav>
-        <div className="w-full px-6">
-          <div className="mt-8 relative rounded-lg bg-[#97b4ce] container mx-auto flex flex-col items-center pt-12 sm:pt-24 pb-24 sm:pb-32 md:pb-48 lg:pb-56 xl:pb-64">
-            <img className="mr-2 lg:mr-12 mt-2 lg:mt-12 absolute right-0 top-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/center_aligned_with_image-svg2.svg" alt="bg" />
-            <img className="ml-2 lg:ml-12 mb-2 lg:mb-12 absolute bottom-0 left-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/center_aligned_with_image-svg3.svg" alt="bg" />
-            <div className="w-11/12 sm:w-2/3 mb-5 sm:mb-10">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-[#b9805a] font-bold leading-tight uppercase">AH City - Supreme Living. Coming Soon</h1>
-            </div>
-            <div className="flex justify-center items-center mb-10 sm:mb-20 gap-x-1">
-              {social.map((item) => (
-                <Link href={item.link} passHref>
-                  <a target="_blank"><Button value={item.icon} bgColor={item.bgColor} /></a>
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className="container mx-auto flex justify-center md:-mt-56 -mt-20 sm:-mt-40">
-            <div className="relative sm:w-2/3 w-11/12">
-              <img src="/hero.jpg" className="rounded-md object-cover hover:shadow-lg opacity-60" alt="Sample Page" layout="fill" role="img" />
-            </div>
-          </div>
         </div>
-      </dh-component>
+      </div>
     </div>
   )
 }
