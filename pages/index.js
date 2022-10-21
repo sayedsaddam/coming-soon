@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Facebook, Twitter, Instagram } from "lucide-react"
 
 import Button from "../components/elements/Button"
 
@@ -9,17 +10,20 @@ export default function Home() {
     {
       name: "Facebook",
       link: "https://www.facebook.com/ahcitysupremeliving",
-      bgColor: '#3b5998'
+      bgColor: "#3b5998",
+      icon: <Facebook />
     },
     {
-      name: "Twitter",
+      name: "t",
       link: "https://www.twitter.com/TheAHcity",
-      bgColor: "#00acee"
+      bgColor: "#00acee",
+      icon: <Twitter />
     },
     {
-      name: "Instagram",
+      name: "i",
       link: "https://www.instagram.com/ah_city",
-      bgColor: "#fbad50"
+      bgColor: "#fbad50",
+      icon: <Instagram />
     },
   ]
 
@@ -53,10 +57,10 @@ export default function Home() {
             <div className="w-11/12 sm:w-2/3 mb-5 sm:mb-10">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-[#b9805a] font-bold leading-tight uppercase">AH City - Supreme Living. Coming Soon</h1>
             </div>
-            <div className="flex justify-center items-center mb-10 sm:mb-20 gap-x-3">
+            <div className="flex justify-center items-center mb-10 sm:mb-20 gap-x-1">
               {social.map((item) => (
                 <Link href={item.link} passHref>
-                  <a target="_blank"><Button value={item.name} bgColor={item.bgColor} /></a>
+                  <a target="_blank"><Button value={item.icon} bgColor={item.bgColor} /></a>
                 </Link>
               ))}
             </div>
