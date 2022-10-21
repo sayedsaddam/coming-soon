@@ -35,7 +35,7 @@ export default function Home() {
                 <div>
                     <h1 className="dark:text-[#b9805a] text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 w-7/12">AH CITY</h1>
                     <h2 className="dark:text[#b9805a] text-3xl font-semibold text-[#b9805a] uppercase">supreme living</h2>
-                    <p className="dark:text-white md:w-7/12 lg:w-11/12 xl:w-10/12 mt-4 lg:mt-5 text-base leading-normal text-lg">AH City, is the epitome of revolution, the junction of four provinces, Punjab, Islamabad, Balochistan, and Sindh, making the project strategically located in D.I.Khan. Offering a new standard of living by bringing masterpiece facilities like healthcare, education, and hospitals, with the aim to become the benchmark for supreme living in D.I.Khan.</p>
+                    <p className="dark:text-white md:w-7/12 lg:w-11/12 xl:w-10/12 mt-4 lg:mt-5 leading-normal text-lg">AH City, is the epitome of revolution, the junction of four provinces, Punjab, Islamabad, Balochistan, and Sindh, making the project strategically located in D.I.Khan. Offering a new standard of living by bringing masterpiece facilities like healthcare, education, and hospitals, with the aim to become the benchmark for supreme living in D.I.Khan.</p>
                     <br />
                     <div className="flex justify-start items-start mb-10 sm:mb-20 gap-x-1">
                       {social.map((item) => (
