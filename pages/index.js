@@ -38,8 +38,8 @@ export default function Home() {
               <br />
               <div className="flex justify-start items-start mb-10 sm:mb-20 gap-x-1">
                 {social.map((item) => (
-                  <Link href={item.link} passHref>
-                    <a key={item.name} target="_blank" title={item.name}><Button value={item.icon} bgColor={item.bgColor} /></a>
+                  <Link key={item.name} href={item.link} passHref>
+                    <a target="_blank" title={item.name}><Button value={item.icon} bgColor={item.bgColor} /></a>
                   </Link>
                 ))}
               </div>
