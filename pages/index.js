@@ -12,13 +12,13 @@ export default function Home() {
       icon: <Facebook />
     },
     {
-      name: "t",
+      name: "Twitter",
       link: "https://www.twitter.com/TheAHcity",
       bgColor: "#00acee",
       icon: <Twitter />
     },
     {
-      name: "i",
+      name: "Instagram",
       link: "https://www.instagram.com/ah_city",
       bgColor: "#fbad50",
       icon: <Instagram />
@@ -31,15 +31,15 @@ export default function Home() {
           <div className="lg:w-4/12 flex justify-center items-center">
             <div>
               <Image className="cursor-pointer w-8 sm:w-auto" src="/ahcity.png" alt="logo" width={70} height={70} />
-              {/* <p className="ml-2 lg:ml-4 text-base lg:text-2xl font-bold text-gray-800"></p> */}
+              <p className="ml-2 lg:ml-4 text-base lg:text-2xl font-bold text-gray-800"></p>
               <h1 className="dark:text-[#b9805a] text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 w-7/12">AH CITY</h1>
-              <h2 className="dark:text[#b9805a] text-3xl font-semibold text-[#b9805a] uppercase">supreme living</h2>
+              <h2 className="dark:text[#b9805a] text-2xl font-semibold text-[#b9805a] uppercase">supreme living</h2>
               <p className="dark:text-gray-700 md:w-7/12 lg:w-11/12 xl:w-10/12 mt-4 lg:mt-5 leading-normal text-lg">AH City, is the epitome of revolution, the junction of four provinces, Punjab, Islamabad, Balochistan, and Sindh, making the project strategically located in D.I.Khan. Offering a new standard of living by bringing masterpiece facilities like healthcare, education, and hospitals, with the aim to become the benchmark for supreme living in D.I.Khan.</p>
               <br />
               <div className="flex justify-start items-start mb-10 sm:mb-20 gap-x-1">
                 {social.map((item) => (
                   <Link href={item.link} passHref>
-                    <a target="_blank"><Button value={item.icon} bgColor={item.bgColor} /></a>
+                    <a key={item.name} target="_blank" title={item.name}><Button value={item.icon} bgColor={item.bgColor} /></a>
                   </Link>
                 ))}
               </div>
